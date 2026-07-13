@@ -1,1 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson: Bootstrap 5 Responsive Grid & Navbar</title>
+
+    <!-- Bootstrap 5.3.3 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN (For the hamburger toggle or branding accents) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        /* =========================================================================
+           1. CUSTOM THEME DESIGN OVERRIDES (Nordic Slate Palette)
+           ========================================================================= */
+        body {
+            background-color: #f8fafc;
+            /* Soft Ice background */
+            color: #1e293b;
+            /* Deep Slate text color */
+        }
+
+        /* Responsive Custom Navbar Style Mapping */
+        .custom-navbar {
+            background-color: #042a2b !important;
+            /* Deep Slate Base */
+            border-bottom: 3px solid #0f1d1d;
+            /* Mint Green Accent Base Line */
+        }
+
+        .custom-navbar .navbar-brand {
+            color: #10b981 !important;
+            /* Mint Green Brand text */
+            font-weight: 700;
+        }
+
+        .custom-navbar .nav-link {
+            color: #f8fafc !important;
+            /* Soft Ice Links */
+            transition: color 0.2s ease-in-out;
+        }
+
+        .custom-navbar .nav-link:hover,
+        .custom-navbar .nav-link.active {
+            color: #10b981 !important;
+            /* Mint Green Hover Highlight */
+        }
+
+        /* Custom Header Styling Rules */
+        .custom-nordic-header {
+            background-color: #1e293b !important;
+            color: #f8fafc !important;
+        }
+
+        .custom-nordic-header h1 {
+            color: #10b981 !important;
+        }
+
+        .custom-sidebar-accent {
+            border-top: 4px solid #10b981 !important;
+        }
+
+        /* Style overrides for the raw code blocks */
+        code {
+            color: #10b981 !important;
+            font-weight: 600;
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================================
+     2. RESPONSIVE NAVIGATION BAR COMPONENT
+     ========================================================================= -->
+    <nav class="navbar navbar-expand-md navbar-dark custom-navbar shadow-sm sticky-top mb-4 p-3">
+        <div class="container">
+            <!-- Brand/Logo Link Header -->
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-hexagon-fill"></i> BuyBuzz Boutique
+
+            </a>
+
+            <!-- Mobile Toggle Button (Hamburger Menu) -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainDepartmentNavbar" aria-controls="mainDepartmentNavbar" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Navbar Content Container Box Component -->
+            <div class="collapse navbar-collapse" id="mainDepartmentNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="login.html">Sign In</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="cart.html"><i
+                                class="bi bi-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Main Structural Layout Row Wrapper -->
+    <div class="row g-4">
+
+        <!-- Main Content Column Block -->
+        <main class="col-12 col-md-12">
+            <div class="card h-100 border-0 shadow-sm p-3">
+                <div class="card-body">
+                    <h2 class="card-title fw-bold h4 text-dark mb-3">About Us</h2>
+                    <p class="card-text"></p>
+
+                    <!-- Fluid Image Container Asset Layout Component -->
+                    <div class="rounded-3 overflow-hidden my-3">
+                       
+                        <p class="card-text">
+                            <p1 
+                                BuyBuzz Boutique is a fun, free, and trusted way to buy and sell instantly online.
+                                We are a leading mobile-first marketplace platform in Southeast Asia Singapore,
+                                Malaysia, Thailand, Indonesia, Vietnam, the Philippines, Taiwan, Brazil, and Mexico.
+                                Join millions of others on BuyBuzz Boutique to list products and shop for deals online.
+                                Doing your
+                                BuyBuzz Boutique BuyBuzz Boutique online
+                                shopping is safe and we make sure of it. Get the item you ordered or get your money back
+                                with BuyBuzz Boutique Guarantee.
+                                Create and browse listings for free, at no extra charge. Join our BuyBuzz Boutique
+                                community and
+                                start shopping today!
+                            </p1>
+                            <br>
+                            <br>
+                            <p1 style="color: #94a3b8; max-width: 600px; margin: 1.5rem auto;">
+                                Join  BuyBuzz Boutique to find everything you need at the best prices. Doing your BuyBuzz Boutique online
+                                shopping at the Philippines
+                                best marketplace cannot get any easier. BuyBuzz Boutique is a social marketplace where you can enjoy
+                                instant and personalized
+                                updates from your friends and favorite community members. If you spot great products or
+                                deals while youre doing your  online shopping,
+                                BuyBuzz Boutique enables you to share these deals with your friends via a simple tap.
+                            </p1>
+                            <br>
+                            <br>
+                            <p1 style="color: #94a3b8; max-width: 600px; margin: 1.5rem auto;">Buy the products you want
+                                in a worry-free manner.
+                                Refer to shop ratings and reviews to find trusted sellers easily. We value our safe
+                                online marketplace! With  BuyBuzz Boutique Guarantee, you can get
+                                your money back if you did not get what you ordered. Take note of your  BuyBuzz Boutique Guarantee
+                                period so that you can choose to extend it
+                                the seller has not shipped your product or if you want to request a return or refund.
+                                BuyBuzz Boutique Guarantee is here to ensure that you have a fun shopping experience.
+                                You can rest easy knowing that  BuyBuzz Boutique Guarantee has your back! </p1>
+                            <br>
+                            <br>
+                            <p1 style="color: #94a3b8; max-width: 600px; margin: 1.5rem auto;">
+                                Not sure what to buy? Our new hashtags allow you to stay up-to-date with trending
+                                products.
+                                Browse effortlessly through our product categories including jewelry from women's
+                                accessories like necklaces that are perfect
+                                gifts for moms. Mobiles for your dad that you can find in mobiles and gadgets. Get
+                                fan-favorite mobile phones like Poco F3, Poco X3 Pro,
+                                Redmi Note 11, and Realme C35. Then amp up the music in your phone with volume master!
+                                Look for the best stroller for your newborn, and
+                                the kids with new toys, games & collectibles. Buy your sister the most volumizing or
+                                lengthening mascara or hair tie.
+                                You can never go wrong with buying a cap for your brother. Purchase flowers and plants
+                                that your aunt and uncle or grandparents will surely
+                                love! Start your fitness journey with exercise and fitness equipment and get health and
+                                personal care items too like Gloxi and more!
+                                Show love to your little pet by giving it the best pet essentials from BuyBuzz Boutique wide array
+                                of pet care items and many more! Spruce up
+                                your home with products inspired by Ikea Philippines and other amazing home and living
+                                brands. Find trending Youtube products on
+                                BuyBuzz Boutique Philippines too!
+                            </p1>
+                            <br>
+                            <br>
+                            <p1 style="color: #94a3b8; max-width: 600px; margin: 1.5rem auto;">
+                                Eager to find out what's trending? BuyBuzz Boutique has all the latest trending products, including
+                                Piso Wifi which is all the rage nowadays!
+                                Find out what the buzz is all about and discover the wonders of Piso Wifi. While
+                                shopping, use our smart search or look through a range
+                                of personalized recommendations to find the perfect buy. Plus, enjoy additional benefits
+                                such as free shipping for selected products.
+                                Start shopping on BuyBuzz Boutique now!
+                            </p1>
+                            <br>
+                            <br>
+                        <h3>Enjoy Special Deals, Sales, Promos, and Discounts on BuyBuzz Boutique Philippines </h3>
+                        <p1 style="color: #94a3b8; max-width: 600px; margin: 1.5rem auto;">
+                            <p1 style="color: #94a3b8; max-width: 600px; margin: 1.5rem auto;"></p1>
+                            Doing your BuyBuzz Boutique online shopping is not only easy and safe, but its also tons of fun. Enjoy
+                            big sales like the 9.9 Super Shopping Day,
+                            10.10 Brands Festival Sale, 11.11 Christmas Sale and the 12.12 Mega Pamasko Sale to score
+                            the biggest and best discounts
+                            and special prices on your favorite products. Treat yourself during payday with BuyBuzz Boutique's
+                            Payday Sale on the 15th and 30th of every month.
+                            With special promotions from shops such as BuyBuzz Boutique's free shipping vouchers, deals, and flash
+                            sales, to weekly offers -
+                            youre sure to become a true BuyBuzz Boutiqueholic. Catch the BuyBuzz Boutique fever with regular deals on your
+                            favorite categories
+                            only on BuyBuzz Boutique Philippines! Download the app on your mobile phone now. If youre new to the
+                            BuyBuzz Boutique fam, you get the chance
+                            to enjoy BuyBuzz Boutique New User vouchers too! BuyBuzz Boutique New User vouchers are the perfect way to welcome
+                            you into your favorite shopping
+                            destination.
+                        </p1>
+                        <br>
+                        <br>
+                        <p1 style="color: #94a3b8; max-width: 600px; margin: 1.5rem auto;">
+                            This is your sign to create a BuyBuzz Boutique account and start shopping on the BuyBuzz Boutique website or BuyBuzz Boutique
+                            app!
+                            Dont miss out on the amazing sales with affordable prices that are waiting for you!
+                        </p1>
+                        <br>
+                        <br>
+                        <h3>Get Free Shipping on BuyBuzz Boutique</h3>
+                        <p1 style="color: #94a3b8; max-width: 600px; margin: 1.5rem auto;">
+                            Aside from BuyBuzz Boutique New User vouchers, you can also enjoy BuyBuzz Boutique's free shipping vouchers today!
+                            For buyers
+                            , shop to your hearts content and enjoy lower prices for your purchases with the help of
+                            BuyBuzz Boutique's free shipping vouchers.
+                            Make sure to keep an eye out for  BuyBuzz Boutique's free shipping vouchers so you can say goodbye to
+                            added delivery fees!
+                            You dont have to worry about the price going up because of shipping. Selling cant get any
+                            easier on BuyBuzz Boutique.
+                            <br>
+                            <br>
+                        </p1>
+
+                  
+
+    <!-- Bootstrap 5 JavaScript Bundle via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
